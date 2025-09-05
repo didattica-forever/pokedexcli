@@ -9,6 +9,7 @@ import (
 	"github.com/didattica-forever/pokedexcli/internal/pokeapi"
 )
 
+
 type config struct {
 	pokeapiClient    pokeapi.Client
 	nextLocationsURL *string
@@ -90,6 +91,11 @@ func getCommands() map[string]cliCommand {
 			name:        "mapb",
 			description: "Get the previous page of locations",
 			callback:    commandMapb,
+		},
+		"pokedex": {
+			name:        "pokedex",
+			description: "See all the pokemon you've caught",
+			callback:    commandPokedex,
 		},
 		"exit": {
 			name:        "exit",
